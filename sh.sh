@@ -27,7 +27,7 @@ _add(){
 			s/\[?\]/\[${filename#*\.}\]/
 		}" README.md
 
-			date=$(date +%D)
+			date=$(date +%d/%m/%y)
 			sed -i -E "s|([0-9]+ : )(\?\?\/\?\?\/\?\?)( : \[.*\])|\1${date//\//\/}\3|" README.md
 			sed -i '/``` /d' README.md
 			echo '``` ' >> README.md
